@@ -790,6 +790,19 @@ lodash@^4.17.14, lodash@^4.17.19, lodash@^4.17.20:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
+macd@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/macd/-/macd-1.0.2.tgz#dffcc3d6311f48a7b783e203a7ea2f408a591a02"
+  integrity sha512-/SQ9K5Ech+BRvGE6YnBfs26JsOJIV9iWoz8FP+uv6yu4OnIXkeyGZxx+VDI+fIK2QgpDvGWHWQ8t45A71+D3qQ==
+  dependencies:
+    math-array "^1.1.2"
+    moving-averages "^4.0.5"
+
+math-array@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/math-array/-/math-array-1.1.2.tgz#6733ceea882ef26b55d70b9277059c63536d32ed"
+  integrity sha512-54uCZjFRNbL4hEzUnaPYDR4MbGBFMnlUOfrk3kDfkB5v3QwaMKwZLIPIWK9WfM1skxxzfV01k05FbCEQGX/4qg==
+
 minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
@@ -808,6 +821,11 @@ mkdirp@^0.5.1:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
+
+moving-averages@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/moving-averages/-/moving-averages-4.0.5.tgz#f1afea7eda8f956694a98857904cee780a4dc03d"
+  integrity sha512-ofrBYz5tIiN3E24a9Q5evRprvb1AQLciE4fnblpv8P0zM/pwwEdGj7GgDQwSxyrAVNe3hfzn9IB5nXi0zt92AA==
 
 ms@2.0.0:
   version "2.0.0"
