@@ -22,15 +22,16 @@ async function main (list) {
       const condition2 = (Math.abs(averagePrice5 - averagePrice20) / averagePrice5) < 0.033
       const condition3 = averagePrice5 < averagePrice20
       if (condition1 && condition2 && condition3) {
+        console.log(index, '----', code)
         fenxiList.push({
           code
         })
-        console.log('fenxiList', fenxiList)
+        // console.log('fenxiList', fenxiList)
       } else {
         // console.log('不符合')
       }
     } catch (err) {
-      console.log(`err${index}:`, err)
+      // console.log(`err${index}:`, err)
     }
     index++
   }
