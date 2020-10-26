@@ -1,10 +1,9 @@
 const gpsdk = require('../lib/index')
 
-let allStock = require('./data/20201023.json')
-// allStock = gpsdk.filter.getChuangye(allStock)
+let allStock = require('./data/20201026.json')
+allStock = gpsdk.filter.getChuangye(allStock)
 // allStock = gpsdk.filter.getBigAmount(allStock)
 allStock = gpsdk.filter.getHighPrice(allStock)
-allStock = gpsdk.filter.getHighRatio(allStock)
 
 async function main (list) {
   const len = list.length
