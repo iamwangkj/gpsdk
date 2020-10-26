@@ -3,7 +3,7 @@ const gpsdk = require('../lib/index')
 let allStock = require('./data/20201026.json')
 allStock = gpsdk.filter.getChuangye(allStock)
 // allStock = gpsdk.filter.getBigAmount(allStock)
-allStock = gpsdk.filter.getHighPrice(allStock)
+// allStock = gpsdk.filter.getHighPrice(allStock)
 
 async function main (list) {
   const len = list.length
@@ -30,13 +30,13 @@ async function main (list) {
         console.log('不足30天的数据')
       }
       // console.log('5-10-20均价', averagePrice5, averagePrice10, averagePrice20)
-      const juli = 0.02
+      const juli = 0.01
       const condition1 = (Math.abs(averagePrice5 - averagePrice10) / averagePrice5) < juli
       const condition2 = (Math.abs(averagePrice5 - averagePrice20) / averagePrice5) < juli
-      const condition5 = (Math.abs(averagePrice5 - averagePrice30) / averagePrice5) < juli
-      const condition3 = averagePrice5 < averagePrice10
-      const condition4 = averagePrice10 < averagePrice30
-      // const condition6 = averagePrice20 < averagePrice30
+      const condition3 = (Math.abs(averagePrice5 - averagePrice30) / averagePrice5) < juli
+      const condition4 = averagePrice5 < averagePrice30
+      const condition5 = averagePrice20 < averagePrice30
+      // const condition4 = averagePrice10 < averagePrice30
       if (condition1 && condition2 && condition3 && condition4 && condition5) {
         console.log(index, '--------', code)
         fenxiList.push({

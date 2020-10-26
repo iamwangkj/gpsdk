@@ -1,3 +1,6 @@
 const gpsdk = require('../lib/index')
 
-gpsdk.collector.getHistory('300100')
+const code = '600893'
+gpsdk.collector.getHistory(code).then((res) => {
+  console.log(`${code}查询历史`, res)
+})
