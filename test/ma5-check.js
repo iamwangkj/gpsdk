@@ -1,11 +1,11 @@
 
-const list = require('./data/redt.json')
+const list = require('./res/ma5.json')
 
 const upList = []
 const downList = []
 list.forEach((item) => {
-  const { buyIn, lasted, code } = item
-  const changePercent = ((lasted.trade - buyIn.trade) / buyIn.trade * 100).toFixed(2)
+  const { ma5, lasted, code } = item
+  const changePercent = ((lasted.trade - ma5.trade) / ma5.trade * 100).toFixed(2)
   if (changePercent > 0) {
     console.log('涨', code, `${changePercent}%`)
     upList.push(item)
