@@ -1,0 +1,263 @@
+[
+  {
+    "code": "300342",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 15.03,
+      "high": 16.08,
+      "trade": 15.58,
+      "low": 14.65,
+      "liang": 139582.64,
+      "priceChange": 0.77,
+      "percentChange": "5.20%",
+      "averagePrice5": 15.698,
+      "averagePrice10": 15.688,
+      "averagePrice20": 15.577
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 14.58,
+      "high": 14.93,
+      "trade": 14.83,
+      "low": 14.46,
+      "liang": 69294.2,
+      "priceChange": 0.25,
+      "percentChange": "1.72%",
+      "averagePrice5": 14.862,
+      "averagePrice10": 15.222,
+      "averagePrice20": 15.244
+    }
+  },
+  {
+    "code": "300137",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 7.58,
+      "high": 8.06,
+      "trade": 7.93,
+      "low": 7.5,
+      "liang": 164940.95,
+      "priceChange": 0.24,
+      "percentChange": "3.12%",
+      "averagePrice5": 7.79,
+      "averagePrice10": 7.814,
+      "averagePrice20": 7.802
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 6.87,
+      "high": 7.05,
+      "trade": 7.01,
+      "low": 6.8,
+      "liang": 156215.38,
+      "priceChange": 0.19,
+      "percentChange": "2.79%",
+      "averagePrice5": 7.264,
+      "averagePrice10": 7.512,
+      "averagePrice20": 7.655
+    }
+  },
+  {
+    "code": "300800",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 37.7,
+      "high": 39.24,
+      "trade": 38.99,
+      "low": 37.47,
+      "liang": 27767,
+      "priceChange": 1.37,
+      "percentChange": "3.64%",
+      "averagePrice5": 37.82,
+      "averagePrice10": 37.591,
+      "averagePrice20": 37.716
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 34.16,
+      "high": 34.94,
+      "trade": 34.51,
+      "low": 34.01,
+      "liang": 12948,
+      "priceChange": 0.41,
+      "percentChange": "1.20%",
+      "averagePrice5": 35.748,
+      "averagePrice10": 36.885,
+      "averagePrice20": 36.991
+    }
+  },
+  {
+    "code": "300477",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 6.52,
+      "high": 6.87,
+      "trade": 6.83,
+      "low": 6.45,
+      "liang": 198941.45,
+      "priceChange": 0.12,
+      "percentChange": "1.79%",
+      "averagePrice5": 6.86,
+      "averagePrice10": 6.88,
+      "averagePrice20": 6.854
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 6.55,
+      "high": 6.8,
+      "trade": 6.59,
+      "low": 6.52,
+      "liang": 195732.12,
+      "priceChange": 0.08,
+      "percentChange": "1.23%",
+      "averagePrice5": 6.65,
+      "averagePrice10": 6.718,
+      "averagePrice20": 6.757
+    }
+  },
+  {
+    "code": "300422",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 11.68,
+      "high": 11.87,
+      "trade": 11.78,
+      "low": 11.61,
+      "liang": 48495.78,
+      "priceChange": 0.11,
+      "percentChange": "0.94%",
+      "averagePrice5": 11.806,
+      "averagePrice10": 11.866,
+      "averagePrice20": 11.909
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 11.12,
+      "high": 11.24,
+      "trade": 11.23,
+      "low": 11.03,
+      "liang": 45424.54,
+      "priceChange": 0.13,
+      "percentChange": "1.17%",
+      "averagePrice5": 11.178,
+      "averagePrice10": 11.384,
+      "averagePrice20": 11.621
+    }
+  },
+  {
+    "code": "300599",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 13.12,
+      "high": 13.3,
+      "trade": 13.13,
+      "low": 12.81,
+      "liang": 16650,
+      "priceChange": 0.02,
+      "percentChange": "0.15%",
+      "averagePrice5": 13.23,
+      "averagePrice10": 13.238,
+      "averagePrice20": 13.174
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 12.84,
+      "high": 13.04,
+      "trade": 12.9,
+      "low": 12.76,
+      "liang": 30916.61,
+      "priceChange": 0.07,
+      "percentChange": "0.55%",
+      "averagePrice5": 12.926,
+      "averagePrice10": 13.061,
+      "averagePrice20": 13.084
+    }
+  },
+  {
+    "code": "300550",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 22.59,
+      "high": 22.86,
+      "trade": 22.59,
+      "low": 22.31,
+      "liang": 3592.68,
+      "priceChange": 0,
+      "percentChange": "0.00%",
+      "averagePrice5": 22.838,
+      "averagePrice10": 23.052,
+      "averagePrice20": 22.873
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 23.4,
+      "high": 23.49,
+      "trade": 22.93,
+      "low": 22.85,
+      "liang": 12363.27,
+      "priceChange": -0.47,
+      "percentChange": "-2.01%",
+      "averagePrice5": 23.102,
+      "averagePrice10": 22.889,
+      "averagePrice20": 22.952
+    }
+  },
+  {
+    "code": "300017",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 8.19,
+      "high": 8.22,
+      "trade": 8.12,
+      "low": 8.06,
+      "liang": 238591.12,
+      "priceChange": -0.08,
+      "percentChange": "-0.98%",
+      "averagePrice5": 8.272,
+      "averagePrice10": 8.307,
+      "averagePrice20": 8.334
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 7.8,
+      "high": 8.16,
+      "trade": 8.04,
+      "low": 7.8,
+      "liang": 375821.91,
+      "priceChange": 0.26,
+      "percentChange": "3.34%",
+      "averagePrice5": 7.968,
+      "averagePrice10": 8.074,
+      "averagePrice20": 8.193
+    }
+  },
+  {
+    "code": "300232",
+    "ma5": {
+      "date": "2020-10-26",
+      "open": 9.68,
+      "high": 9.73,
+      "trade": 9.51,
+      "low": 9.36,
+      "liang": 133742.2,
+      "priceChange": -0.2,
+      "percentChange": "-2.06%",
+      "averagePrice5": 9.968,
+      "averagePrice10": 10.039,
+      "averagePrice20": 9.919
+    },
+    "lasted": {
+      "date": "2020-11-03",
+      "open": 9.59,
+      "high": 9.97,
+      "trade": 9.85,
+      "low": 9.58,
+      "liang": 165554.02,
+      "priceChange": 0.3,
+      "percentChange": "3.14%",
+      "averagePrice5": 9.804,
+      "averagePrice10": 9.885,
+      "averagePrice20": 9.959
+    }
+  }
+]

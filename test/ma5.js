@@ -1,3 +1,5 @@
+const toJson = require('./utils/toJson')
+const path = require('path')
 const gpsdk = require('../lib/index')
 
 let allStock = require('./data/20201026.json')
@@ -15,8 +17,9 @@ async function main (list) {
       const code = list[index].code
       // console.log('循环体中的index', index, code)
       const itemRes = await gpsdk.collector.getHistory(code)
-      // console.log('itemRes=', itemRes)
-      const { averagePrice5, averagePrice10, averagePrice20 } = itemRes[0]
+      const ma5 = itemRes[6]
+      const lasted = itemRes[0]
+      const { averagePrice5, averagePrice10, averagePrice20 } = ma5
       let averagePrice30 = 0
       if (itemRes.length > 30) {
         let total = 0
@@ -40,7 +43,9 @@ async function main (list) {
       if (condition1 && condition2 && condition3 && condition4 && condition5) {
         console.log(index, '--------', code)
         fenxiList.push({
-          code
+          code,
+          lasted: lasted,
+          buyIn: ma5
         })
         // console.log('fenxiList', fenxiList)
       } else {
@@ -51,6 +56,7 @@ async function main (list) {
     }
     index++
   }
+  toJson(path.resolve(__dirname, './data/ma5.json'), fenxiList)
   console.log('结束')
 }
 
