@@ -1,8 +1,8 @@
-const toJson = require('./utils/toJson')
+const toJson = require('../utils/toJson')
 const path = require('path')
-const gpsdk = require('../lib/index')
+const gpsdk = require('../../lib/index')
 
-let allStock = require('./data/20201026.json')
+let allStock = require('../data/20201026.json')
 allStock = gpsdk.filter.getChuangye(allStock)
 // allStock = gpsdk.filter.getBigAmount(allStock)
 // allStock = gpsdk.filter.getHighPrice(allStock)

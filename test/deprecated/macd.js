@@ -1,8 +1,8 @@
-const gpsdk = require('../lib/index')
-const toJson = require('./utils/toJson')
+const gpsdk = require('../../lib/index')
+const toJson = require('../utils/toJson')
 const path = require('path')
 
-let allStock = require('./data/20201026.json')
+let allStock = require('../data/20201026.json')
 allStock = gpsdk.filter.getBigAmount(allStock)
 const buyInList = []
 
