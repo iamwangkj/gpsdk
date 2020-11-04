@@ -2,38 +2,34 @@ const gpsdk = require('../lib/index')
 const toJson = require('./utils/toJson')
 const path = require('path')
 
-let allStock = require('./data/20201026.json')
+const buyDate = '20200706'
+let allStock = require(`./data-all/${buyDate}.json`)
 allStock = gpsdk.filter.getBigAmount(allStock)
 // allStock = gpsdk.filter.getChuangye(allStock)
 // allStock = gpsdk.filter.getHighPrice(allStock)
 allStock = gpsdk.filter.getRedT(allStock)
+toJson(path.resolve(__dirname, `./data-buy/redt-${buyDate}.json`), allStock)
 
-async function main (list) {
+async function diff (list) {
   const len = list.length
   console.log('len', len)
   let index = 0
-  const fenxiList = []
+  const buyList = []
+
   while (index < len) {
     try {
       const code = list[index].code
-      // console.log('循环体中的index', index, code)
+      console.log(`循环体中的${index}----${code}`)
       const itemRes = await gpsdk.collector.getHistory(code)
-      const buyIn = list[index]
-      const lasted = itemRes[0]
-      console.log(index, '--------', code)
-      fenxiList.push({
+      buyList.push({
         code,
-        lasted: lasted,
-        buyIn: buyIn
+        sale: itemRes[0],
+        buy: list[index]
       })
     } catch (err) {
       // console.log(`err${index}:`, err)
     }
     index++
   }
-
-  toJson(path.resolve(__dirname, './data/redt.json'), fenxiList)
   console.log('结束')
 }
-
-main(allStock)
