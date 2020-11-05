@@ -2,13 +2,12 @@ const gpsdk = require('../lib/index')
 const toJson = require('./utils/toJson')
 const path = require('path')
 
-const buyDate = '20200706'
-let allStock = require(`./data-all/${buyDate}.json`)
-allStock = gpsdk.filter.getBigAmount(allStock)
+let allStock = require('./data-all/20201105.json')
+// allStock = gpsdk.filter.getBigAmount(allStock)
 // allStock = gpsdk.filter.getChuangye(allStock)
 // allStock = gpsdk.filter.getHighPrice(allStock)
 allStock = gpsdk.filter.getRedT(allStock)
-toJson(path.resolve(__dirname, `./data-buy/redt-${buyDate}.json`), allStock)
+toJson(path.resolve(__dirname, './data-res/redt.json'), allStock)
 
 async function diff (list) {
   const len = list.length
