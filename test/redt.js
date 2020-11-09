@@ -1,34 +1,36 @@
 const gpsdk = require('../lib/index')
 const toJson = require('./utils/toJson')
 const path = require('path')
+function getCheck () {
+  let allStock = require('./data-all/20201103.json')
+  // allStock = gpsdk.filter.getBigAmount(allStock)
+  // allStock = gpsdk.filter.getChuangye(allStock)
+  // allStock = gpsdk.filter.getHighPrice(allStock)
+  allStock = gpsdk.filter.getRedT(allStock)
+  toJson(path.resolve(__dirname, './data-res/redt.json'), allStock)
 
-let allStock = require('./data-all/20201105.json')
-// allStock = gpsdk.filter.getBigAmount(allStock)
-// allStock = gpsdk.filter.getChuangye(allStock)
-// allStock = gpsdk.filter.getHighPrice(allStock)
-allStock = gpsdk.filter.getRedT(allStock)
-toJson(path.resolve(__dirname, './data-res/redt.json'), allStock)
+  const zuixinStock = require('./data-all/20201109.json')
+  const shuchu = []
+  allStock.forEach((buyItem) => {
+    zuixinStock.some((item) => {
+      if (buyItem.code === item.code) {
+        shuchu.push({
+          code: buyItem.code,
+          buy: buyItem,
+          sale: item
+        })
+        return true
+      }
+    })
+  })
 
-async function diff (list) {
-  const len = list.length
-  console.log('len', len)
-  let index = 0
-  const buyList = []
-
-  while (index < len) {
-    try {
-      const code = list[index].code
-      console.log(`循环体中的${index}----${code}`)
-      const itemRes = await gpsdk.collector.getHistory(code)
-      buyList.push({
-        code,
-        sale: itemRes[0],
-        buy: list[index]
-      })
-    } catch (err) {
-      // console.log(`err${index}:`, err)
-    }
-    index++
-  }
-  console.log('结束')
+  toJson(path.resolve(__dirname, './data-res/redt-check.json'), shuchu)
 }
+
+function check1 () {
+  const data = require('./data-res/redt-check.json')
+  gpsdk.checker.check(data)
+}
+
+// getCheck()
+check1()
