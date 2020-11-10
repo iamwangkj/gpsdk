@@ -1,20 +1,25 @@
 const gpsdk = require('../lib/index')
 const toJson = require('./utils/toJson')
 const path = require('path')
-function getCheck () {
-  let allStock = require('./data-all/20201103.json')
-  // allStock = gpsdk.filter.getBigAmount(allStock)
+
+function getBuy () {
+  let allStock = require('./data-all/20201110.json')
+  allStock = gpsdk.filter.getBigAmount(allStock)
+  allStock = gpsdk.filter.removeST(allStock)
   // allStock = gpsdk.filter.getChuangye(allStock)
-  // allStock = gpsdk.filter.getHighPrice(allStock)
   allStock = gpsdk.filter.getRedT(allStock)
   toJson(path.resolve(__dirname, './data-res/redt.json'), allStock)
+}
+getBuy()
 
+function getMerge () {
+  const buyList = require('./data-res/redt.json')
   const zuixinStock = require('./data-all/20201109.json')
-  const shuchu = []
-  allStock.forEach((buyItem) => {
+  const mergeList = []
+  buyList.forEach((buyItem) => {
     zuixinStock.some((item) => {
       if (buyItem.code === item.code) {
-        shuchu.push({
+        mergeList.push({
           code: buyItem.code,
           buy: buyItem,
           sale: item
@@ -23,14 +28,10 @@ function getCheck () {
       }
     })
   })
-
-  toJson(path.resolve(__dirname, './data-res/redt-check.json'), shuchu)
+  toJson(path.resolve(__dirname, './data-res/redt-merge.json'), mergeList)
 }
 
-function check1 () {
-  const data = require('./data-res/redt-check.json')
+function checkRes () {
+  const data = require('./data-res/redt-merge.json')
   gpsdk.checker.check(data)
 }
-
-// getCheck()
-check1()
