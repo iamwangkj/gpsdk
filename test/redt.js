@@ -3,7 +3,7 @@ const toJson = require('./utils/toJson')
 const path = require('path')
 
 function getBuy () {
-  let allStock = require('./data-all/20201110.json')
+  let allStock = require('./data-all/20201116.json')
   allStock = gpsdk.filter.getBigAmount(allStock)
   allStock = gpsdk.filter.removeST(allStock)
   // allStock = gpsdk.filter.getChuangye(allStock)
