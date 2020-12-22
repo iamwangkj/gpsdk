@@ -1,11 +1,15 @@
 const gpsdk = require('../lib/index')
 const toJson = require('./utils/toJson')
 const path = require('path')
+const dayjs = require('dayjs')
 
-let allStock = require('./data-all/20201109.json')
-allStock = gpsdk.filter.removeKechuang(allStock)
-allStock = gpsdk.filter.getChuangye(allStock)
-allStock = gpsdk.filter.getBigAmount(allStock)
+function commonFilter (list) {
+  let allStock = gpsdk.filter.removeST(list)
+  allStock = gpsdk.filter.removeKechuang(allStock)
+  allStock = gpsdk.filter.getBigAmount(allStock)
+  allStock = gpsdk.filter.removeLimitUp(allStock)
+  return allStock
+}
 
 async function getMACD0 (list) {
   const resList = []
@@ -19,7 +23,6 @@ async function getMACD0 (list) {
       const priceArr = itemRes.map((tradeItem) => {
         return tradeItem.trade
       })
-      // console.log('priceArr', priceArr)
       const macdObj = gpsdk.analyst.macd(priceArr)
       const flag = Number(macdObj.macds[6])
       const flag2 = Number(macdObj.diffs[6])
@@ -36,4 +39,9 @@ async function getMACD0 (list) {
   console.log('结束')
 }
 
-getMACD0(allStock)
+function main () {
+  let allStock = require(`./data-all/${dayjs().format('YYYYMMDD')}.json`)
+  allStock = commonFilter(allStock)
+  getMACD0(allStock)
+}
+main()
