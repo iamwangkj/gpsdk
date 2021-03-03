@@ -5,7 +5,6 @@ const gpsdk = require('../lib/index')
 // let allStock = require('../data-all/20201026.json')
 // allStock = gpsdk.filter.getChuangye(allStock)
 // allStock = gpsdk.filter.getBigAmount(allStock)
-// allStock = gpsdk.filter.getHighPrice(allStock)
 
 const allStock = require('./data-res/macd.json')
 
